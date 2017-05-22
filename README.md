@@ -1,8 +1,9 @@
-## Welcome to GitHub Pages
+# نحوه ی استفاده از اینام در پایتون
+## چگونه در پایتون می توانیم از اینام آماده استفاده کنیم
+از پایتون 3.4 اینام به پایتون اضافه شد و شما با دستورات زیر میتوانید آن را نصب کنید:
+`code` enum34:   $ pip install enum34
+aenum:    $ pip install aenum
 
-You can use the [editor on GitHub](https://github.com/alinematich/enums.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
