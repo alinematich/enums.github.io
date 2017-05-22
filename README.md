@@ -5,7 +5,7 @@
             @font-face {
                 font-family: nazanin;
                 src: url('https://fonts.googleapis.com/css?family=BNazanin');
-                justify: right;
+                direction: rtl;
             }
         </style>
     </head>
