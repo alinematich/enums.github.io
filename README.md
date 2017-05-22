@@ -1,9 +1,28 @@
 # نحوه ی استفاده از اینام در پایتون
-## چگونه در پایتون می توانیم از اینام آماده استفاده کنیم
-از پایتون 3.4 اینام به پایتون اضافه شد و شما با دستورات زیر میتوانید آن را نصب کنید:
-`code` enum34:   $ pip install enum34
-aenum:    $ pip install aenum
+### چگونه در پایتون می توانیم از اینام آماده استفاده کنیم
 
+از پایتون 3.4 اینام به پایتون اضافه شد و شما با دستورات زیر میتوانید آن را نصب کنید:
+
+`enum34:   $ pip install enum34
+aenum:    $ pip install aenum`
+
+و به صورت زیر آن ها را استفاده کنید:
+
+`from enum import Enum     # for enum34, or the stdlib version
+# from aenum import Enum  # for the aenum version
+Animal = Enum('Animal', 'ant bee cat dog')
+
+Animal.ant  # returns <Animal.ant: 1>
+Animal['ant']  # returns <Animal.ant: 1> (string lookup)
+Animal.ant.name  # returns 'ant' (inverse lookup)`
+
+و یا به این صورت:
+
+`class Animal(Enum):
+    ant = 1
+    bee = 2
+    cat = 3
+    dog = 4`
 
 ### Markdown
 
