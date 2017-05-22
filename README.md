@@ -5,10 +5,11 @@
             @font-face {
                 font-family: nazanin;
                 src: url('https://fonts.googleapis.com/css?family=BNazanin');
+                justify: right;
             }
         </style>
     </head>
-    </html>
+</html>
 # نحوه ی استفاده از اینام در پایتون
 
 
