@@ -3,8 +3,8 @@
 
 از پایتون 3.4 اینام به پایتون اضافه شد و شما با دستورات زیر میتوانید آن را نصب کنید:
 
-`enum34:   $ pip install enum34`
-`aenum:    $ pip install aenum`
+```enum34:   $ pip install enum34
+aenum:    $ pip install aenum```
 
 و به صورت زیر آن ها را استفاده کنید:
 
