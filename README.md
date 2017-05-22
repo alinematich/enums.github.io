@@ -10,7 +10,7 @@ aenum:    $ pip install aenum
 
 و به صورت زیر آن ها را استفاده کنید:
 
-```
+```python
 from enum import Enum     # for enum34, or the stdlib version
 # from aenum import Enum  # for the aenum version
 Animal = Enum('Animal', 'ant bee cat dog')
@@ -21,7 +21,7 @@ Animal.ant.name  # returns 'ant' (inverse lookup)
 
 و یا به این صورت:
 
-```
+```python
 class Animal(Enum):
     ant = 1
     bee = 2
@@ -35,14 +35,14 @@ class Animal(Enum):
 
 ساده ترین روش:
 
-```
+```python
 def enum(**enums):
     return type('Enum', (), enums)
 ```
 
 روش استفاده:
 
-```
+```python
 >>> Numbers = enum(ONE=1, TWO=2, THREE='three')
 >>> Numbers.ONE
 1
@@ -54,7 +54,7 @@ def enum(**enums):
 
 و با کمی پیشرفت دادن:
 
-```
+```python
 def enum(*sequential, **named):
     enums = dict(zip(sequential, range(len(sequential))), **named)
     return type('Enum', (), enums)
@@ -62,7 +62,7 @@ def enum(*sequential, **named):
 
 روش استفاده:
 
-```
+```python
 >>> Numbers = enum('ZERO', 'ONE', 'TWO')
 >>> Numbers.ZERO
 0
@@ -72,7 +72,7 @@ def enum(*sequential, **named):
 
 و حتی میتوانیم کلید ها را از اعداد بدست اوریم:
 
-```
+```python
 def enum(*sequential, **named):
     enums = dict(zip(sequential, range(len(sequential))), **named)
     reverse = dict((value, key) for key, value in enums.iteritems())
@@ -82,13 +82,13 @@ def enum(*sequential, **named):
 
 روش استفاده:
 
-```
+```python
 >>> Numbers.reverse_mapping['three']
 'THREE'
 ```
 ورژن کمی پیشرفته ی آن را نیز میتوانید در زیر ببینید:
 
-```
+```python
 def cmp(a,b):
    if a < b: return -1
    if b < a: return 1
