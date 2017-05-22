@@ -1,4 +1,4 @@
-
+<html>
     <head>
         <meta charset="UTF-8">
         <style>
@@ -6,7 +6,9 @@
                 font-family: nazanin;
                 src: url('https://fonts.googleapis.com/css?family=BNazanin');
             }
-        </style></head>
+        </style>
+    </head>
+    </html>
 # نحوه ی استفاده از اینام در پایتون
 
 
