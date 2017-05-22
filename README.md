@@ -1,4 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=fontname);
+
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            @font-face {
+                font-family: nazanin;
+                src: url('https://fonts.googleapis.com/css?family=BNazanin');
+            }
+        </style></head>
 # نحوه ی استفاده از اینام در پایتون
 
 
