@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=fontname);
 # نحوه ی استفاده از اینام در پایتون
 
 
@@ -13,7 +14,7 @@ aenum:    $ pip install aenum
 و به صورت زیر آن ها را استفاده کنید:
 
 ```python
-from enum import Enum     # for enum34, or the stdlib version
+from enum import Enum  # for enum34, or the stdlib version
 # from aenum import Enum  # for the aenum version
 Animal = Enum('Animal', 'ant bee cat dog')
 Animal.ant  # returns <Animal.ant: 1>
@@ -58,7 +59,8 @@ def enum(**enums):
 
 ```python
 def enum(*sequential, **named):
-    enums = dict(zip(sequential, range(len(sequential))), **named)
+    x = range(len(sequential))
+    enums = dict(zip(sequential, x), **named)
     return type('Enum', (), enums)
 ```
 
@@ -76,8 +78,11 @@ def enum(*sequential, **named):
 
 ```python
 def enum(*sequential, **named):
-    enums = dict(zip(sequential, range(len(sequential))), **named)
-    reverse = dict((value, key) for key, value in enums.iteritems())
+    x = range(len(sequential))
+    enums = dict(zip(sequential, x), **named)
+    reverse = \
+        dict((value, key) for key,
+            value in enums.iteritems())
     enums['reverse_mapping'] = reverse
     return type('Enum', (), enums)
 ```
@@ -151,26 +156,4 @@ if __name__ == '__main__':
    Confirmation = Enum('No', 'Yes')
    answer = Confirmation.No
    print( 'Your answer is not', ~answer)
-```
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
